@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Date Night Creator</title>
+    <!-- stylesheet for Materialize CSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
+    <!-- stylesheet for custom CSS -->
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+<body>
+    <!-- page content -->
+    <main class=" row white main">
+        <!-- column containing header -->
+        <div class="col s12 indigo darken-4 header-container">
+            <header>
+                <div>
+                    <h1 class="center-align">Personal Date Night Creator</h1>
+                </div>
+            </header>
+        </div>
+
+        <!-- column containing form -->
+        <div class="col l3">
+            <form id="date-form white">
+                <!-- date select -->
+                <div class="indigo lighten-3 date-select-container">
+                    <label for="date">Set A Date:</label>
+                    <input type="text" id="date" name="set-date" class="date-input datepicker" placeholder="Pick A Date">
+                </div>
+
+                <!-- genre select -->
+                <div class="indigo lighten-3 genre-select-container">
+                    <label for="genres">Pick A Movie:</label>
+                    <input type="text" class="year-selector" name="set-year" id="year" maxlength="4" placeholder="Pick A Year">
+                    <select id="genres" name="genre-list">
+                        <!-- options containing different genres -->
+                        <option value="genre" selected>Genre</option>
+                        <option value="28">Action</option>
+                        <option value="12">Adventure</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="10402">Music</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Fiction</option>
+                        <option value="53">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                </div>
+
+                <!-- food type select -->
+                <div class="indigo lighten-3 food-type-select-container">
+                    <label for="food-types">Pick Your Meal:</label>
+                    <select id="food-types" name="food-type-list">
+                        <!-- insert values of different food styles -->
+                        <option value="cuisine-style" selected>Cuisine Style</option>
+                        <option value="any">Any</option>
+                        <option value="american">American</option>
+                        <option value="asian">Asian</option>
+                        <option value="bakery">Bakery</option>
+                        <option value="bbq">BBQ</option>
+                        <option value="burgers">Burgers</option>
+                        <option value="deli">Deli</option>
+                        <option value="gluten-free">Gluten Free</option>
+                        <option value="greek">Greek</option>
+                        <option value="indian">Indian</option>
+                        <option value="italian">Italian</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="korean">Korean</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="salad">Salad</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="steakhouse">Steakhouse</option>
+                        <option value="sushi">Sushi</option>
+                        <option value="thai">Thai</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+
+                <!-- submit button -->
+                <div class="indigo lighten-3 submit-button-container">
+                    <!-- displays error message if needed -->
+                    <div id="error" class="pink accent-2">
+                    </div>
+                    <button id="movie-btn" type="button" class="form-button btn btn-primary indigo">Submit</button>
+                </div>
+            </form>
+
+            <div>
+                <!-- Modal Trigger -->
+                <button data-target="planned-dates-modal" class="btn modal-trigger light-blue darken-4">View Planned Dates</button>
+            </div>
+            
+        </div>
+
+        <!-- column containing food sections -->
+        <div class="col l5">
+            <!-- food section -->
+            <div class="food-section">
+                <img src="https://spoonacular.com/recipeImages/716429-556x370.jpg" alt="food image" class="food-image">
+                <h2 id="food-title" class="center-align food-title">Food title</h2>
+                <p class="ingredients-title">Ingredients:</p>
+                <ul id="ingredient-list">
+                    <li class="ingredient">list item</li>
+                    <li class="ingredient">list item</li>
+                    <li class="ingredient">list item</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- column containing movie section -->
+        <div class="col l4">
+            <!-- movie section -->
+            <div class="movie-section">
+                <div id="movie-title" class="movie-title">
+                    <h3 class="center-align title">Feature Film</h3>
+                    <!-- image of movie poster -->
+                    <a id="poster-anchor" class="poster-anchor">
+                        <img src="./Assets/images/now-showing.jpg" alt="movie poster" id="movie-poster" class="movie-poster">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column containing footer -->
+        <div class="col s12">
+            <!-- footer -->
+            <footer></footer>
+        </div>
+
+        <!-- modal containing planned dates -->
+        <div id="planned-dates-modal" class="modal">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div>
+                    <h4>Planned Dates:</h4>
+                </div>
+                <!-- planned dates list -->
+                <div>
+                    <ul id="planned-dates-list">
+
+                    </ul>
+                </div>
+            </div>
+            <!-- button to close modal -->
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- script for JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- script for Materialize library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- script for custom js -->
+    <script src="./Assets/js/script.js"></script>
+</body>
+</html>
