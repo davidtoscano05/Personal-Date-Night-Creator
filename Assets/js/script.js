@@ -12,6 +12,18 @@ $(document).ready(function () {
 $(document).ready(function(){
   $('.modal').modal();
 });  
+var modal = document.getElementById("music-modal");
+
+var btn = document.getElementById("musicBtn")
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display ="none";
+}
 
 // Movie generator
 $("#movie-btn").on("click", function findMovie() {

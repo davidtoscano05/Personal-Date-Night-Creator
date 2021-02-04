@@ -4,17 +4,6 @@
 
 =======
 >>>>>>> b24897d2474f14c052b1d5c28263ab8317ab4813
-API's:
-1.The Movie Database API 
-https://developers.themoviedb.org/3
-2.SpoonAcular api
-spoonacular.com
-
-CSSFrame work:
-Bulma.io
-
-Description:
-Personal Date Night Creator, allows you to spice up date night during these tough Covid-19 times.
 =======
 # Personal Date Night Creator
 
@@ -44,6 +33,7 @@ creating a personal date night experience.
 ## Link to Deployed Application
 
 <<<<<<< HEAD
+https://davidtoscano05.github.io/Personal-Date-Night-Creator/
 <<<<<<< HEAD
 
 =======
